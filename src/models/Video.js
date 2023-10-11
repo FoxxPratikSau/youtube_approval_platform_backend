@@ -23,6 +23,10 @@ const VideoSchema = new Schema({
         ref: 'Editor',
         required: true
     },
+    associatedYoutuber: {
+        type: Schema.Types.ObjectId,
+        ref: 'Youtuber'
+    },
     approvedBy: {
         type: Schema.Types.ObjectId,
         ref: 'Youtuber'

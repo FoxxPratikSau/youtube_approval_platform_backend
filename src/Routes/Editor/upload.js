@@ -28,7 +28,8 @@ editorUploadRouter.post('/upload', userAuth, upload.single('video'), async (req,
         title: req.body.title,
         description: req.body.description,
         filePath: req.file.path,
-        uploadedBy: req.user._id
+        uploadedBy: req.user._id,
+        associatedYoutuber: req.body.associatedYoutuber
     });
 
     await video.save();
